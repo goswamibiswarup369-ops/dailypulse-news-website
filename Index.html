@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DailyPulse - A responsive blog and news website." />
+  <title>DailyPulse | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">DailyPulse</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Latest News & Stories</p>
+          <h1>Fresh insights, stories, and updates every day.</h1>
+          <p>DailyPulse is a clean and responsive blog website built for readers who want fast, simple, and engaging content.</p>
+          <a href="articles.html" class="btn">Read Articles</a>
+        </div>
+        <div class="hero-image">
+          <img src="image/hero.jpg.jpg" alt="News website hero banner" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-header">
+        <h2>Latest News</h2>
+        <div class="topic-filter">
+          <button class="topic-btn active" data-topic="technology">Technology</button>
+          <button class="topic-btn" data-topic="business">Business</button>
+          <button class="topic-btn" data-topic="sports">Sports</button>
+        </div>
+      </div>
+
+      <div id="newsGrid" class="card-grid news-grid">
+        <p id="newsLoading">Loading latest news...</p>
+      </div>
+
+      <p id="newsError" class="error" style="margin-top:1rem;"></p>
+    </section>
+
+    <section class="container section newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe for weekly highlights, featured stories, and new blog posts.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" aria-label="Email address" />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 DailyPulse.website created by Biswarup Goswami. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
