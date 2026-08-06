@@ -43,7 +43,7 @@ dailypulse-news-website/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/dailypulse-news-website.git
+   git clone https://github.com/goswamibiswarup369-ops/dailypulse-news-website.git
    cd dailypulse-news-website
    ```
 2. Open `index.html` in your browser.
@@ -56,7 +56,7 @@ dailypulse-news-website/
 2. Go to **Settings → Pages**.
 3. Set Source to `main` branch and `/ (root)` folder.[web:65][web:71]
 4. Your site will be available at:
-   `https://YOUR_USERNAME.github.io/dailypulse-news-website/`.
+   `https://goswamibiswarup369-ops.github.io/dailypulse-news-website/`.
 
 ## Author
 
