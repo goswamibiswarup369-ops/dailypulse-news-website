@@ -1,0 +1,12 @@
+{
+  "background_color": "#3a3939",
+  "description": "DailyPulse delivers breaking news, national and international updates, and in-depth articles.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "DailyPulse",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "DailyPulse",
+  "start_url": "/",
+  "theme_color": "#2b5ccc"
+}
