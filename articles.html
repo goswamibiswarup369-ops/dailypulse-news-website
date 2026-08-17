@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Articles and stories from DailyPulse." />
   <title>DailyPulse | Articles</title>
+  <meta name="description" content="Explore featured stories, guides, and opinion pieces from the DailyPulse editorial team." />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/launchericon-192x192.png">
+  <link rel="apple-touch-icon" href="icons/launchericon-192x192.png">
+  <meta name="theme-color" content="#2563eb">
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+  <script defer src="main/main.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -22,27 +26,35 @@
     </div>
   </header>
 
-  <main class="container section">
-    <h1>Latest Articles</h1>
-    <p>
-      Explore featured stories, practical guides, and opinion pieces from the DailyPulse editorial team.
-      These articles are written to be simple, clear, and useful for everyday readers.
-    </p>
-
-    <section class="article-categories">
-      <h2>Browse by Category</h2>
-      <div class="article-tags">
-        <span class="tag">Technology</span>
-        <span class="tag">Business</span>
-        <span class="tag">Design</span>
-        <span class="tag">Lifestyle</span>
-        <span class="tag">Productivity</span>
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <p class="eyebrow">Editorial</p>
+        <h1>Latest Articles</h1>
+        <p>
+          Featured stories, practical guides, and opinion pieces — written to be simple,
+          clear, and useful for everyday readers.
+        </p>
       </div>
     </section>
 
-    <section class="article-featured">
+    <section class="container">
+      <div class="article-categories">
+        <h2>Browse by Category</h2>
+        <div class="article-tags">
+          <span class="tag">Technology</span>
+          <span class="tag">Business</span>
+          <span class="tag">Design</span>
+          <span class="tag">Lifestyle</span>
+          <span class="tag">Productivity</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
       <article class="article-item featured">
-        <h2>Featured: How Technology Is Shaping Everyday Life</h2>
+        <span class="badge">Featured</span>
+        <h2>How Technology Is Shaping Everyday Life</h2>
         <p>
           From mobile payments to smart homes, technology quietly supports almost everything we do.
           This article looks at simple examples of tech we use every day without even thinking about it.
@@ -51,37 +63,58 @@
           We also explore how small improvements in apps, websites, and digital tools can save time and
           reduce stress for students, professionals, and families.
         </p>
+        <a href="#" class="read-more">Read full story →</a>
       </article>
     </section>
 
-    <section class="article-list">
-      <article class="article-item">
-        <h2>Design Tips for Clean and Modern Websites</h2>
-        <p>
-          A modern website does not need to be complicated. With enough white space, clear typography,
-          and a simple color palette, you can create a layout that feels professional and easy to read.
-        </p>
-        <p>
-          In this article, we share basic design tips you can apply to portfolios, blogs, and business sites
-          without using any heavy frameworks.
-        </p>
-      </article>
+    <section class="container section">
+      <div class="section-header">
+        <h2>More Stories</h2>
+      </div>
+      <div class="article-list">
+        <article class="article-item">
+          <span class="tag">Design</span>
+          <h2>Design Tips for Clean and Modern Websites</h2>
+          <p>
+            A modern website does not need to be complicated. With enough white space, clear typography,
+            and a simple color palette, you can create a layout that feels professional and easy to read.
+          </p>
+          <p>
+            In this article, we share basic design tips you can apply to portfolios, blogs, and business sites
+            without using any heavy frameworks.
+          </p>
+          <a href="#" class="read-more">Read full story →</a>
+        </article>
 
-      <article class="article-item">
-        <h2>Getting Started with Responsive Layouts</h2>
-        <p>
-          More people browse the internet on phones than on desktops, so responsive design is no longer optional.
-          Learn how flexible grids, relative units, and media queries help your pages adapt to any screen size.
-        </p>
-      </article>
+        <article class="article-item">
+          <span class="tag">Development</span>
+          <h2>Getting Started with Responsive Layouts</h2>
+          <p>
+            More people browse the internet on phones than on desktops, so responsive design is no longer optional.
+            Learn how flexible grids, relative units, and media queries help your pages adapt to any screen size.
+          </p>
+          <a href="#" class="read-more">Read full story →</a>
+        </article>
 
-      <article class="article-item">
-        <h2>Simple Ways to Stay Informed Without Overload</h2>
-        <p>
-          News and social feeds can feel endless. This article explains how to pick a few high‑quality sources,
-          set a reading schedule, and avoid information overload while still staying updated.
-        </p>
-      </article>
+        <article class="article-item">
+          <span class="tag">Lifestyle</span>
+          <h2>Simple Ways to Stay Informed Without Overload</h2>
+          <p>
+            News and social feeds can feel endless. This article explains how to pick a few high-quality sources,
+            set a reading schedule, and avoid information overload while still staying updated.
+          </p>
+          <a href="#" class="read-more">Read full story →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section newsletter">
+      <h2>Never Miss a Story</h2>
+      <p>Subscribe for weekly highlights, featured stories, and new blog posts.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" aria-label="Email address" />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
     </section>
   </main>
 
