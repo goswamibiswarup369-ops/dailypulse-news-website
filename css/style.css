@@ -1,152 +1,166 @@
-.page-banner {
-  background: #111827;
+/* ============ Animations & Hover Effects ============ */
+
+/* Smooth transitions on everything interactive by default */
+a, button, .card, .article-item, .feature-card, .stat-card,
+.contact-info-card, .tag, .topic-btn, .nav a, .btn, img {
+  transition: all 0.25s ease;
+}
+
+/* --- Logo --- */
+.logo {
+  display: inline-block;
+}
+.logo:hover {
+  color: #60a5fa;
+  transform: scale(1.04);
+}
+
+/* --- Nav links --- */
+.nav a {
+  position: relative;
+}
+.nav a:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Buttons --- */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Topic filter buttons --- */
+.topic-btn:hover {
+  background: #cbd5e1;
+  transform: translateY(-2px);
+}
+.topic-btn.active:hover {
+  background: #1d4ed8;
+}
+
+/* --- Tags --- */
+.tag {
+  cursor: default;
+}
+.tag:hover {
+  background: #2563eb;
   color: #fff;
-  padding: 3rem 0;
-  text-align: left;
+  transform: translateY(-2px);
 }
 
-.page-banner h1 {
-  margin: 0.4rem 0;
-  font-size: 2.2rem;
+/* --- Cards (news, article, feature, stat, contact-info) --- */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
-.page-banner p {
-  color: #d1d5db;
-  max-width: 640px;
+.card img {
+  transition: transform 0.4s ease;
+}
+.card:hover img {
+  transform: scale(1.06);
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin: 2rem 0;
+.feature-card,
+.stat-card,
+.contact-info-card,
+.article-item {
+  transform: translateY(0);
 }
-
-.stat-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.25rem;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.stat-number {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #2563eb;
-}
-
-.stat-label {
-  display: block;
-  font-size: 0.85rem;
-  color: #6b7280;
-  margin-top: 0.25rem;
-}
-
-.feature-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.feature-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+.feature-card:hover,
+.stat-card:hover,
+.contact-info-card:hover,
+.article-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
 }
 
 .feature-icon {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-
-.feature-card h3 {
-  margin: 0 0 0.4rem;
-}
-
-.feature-card p {
-  color: #4b5563;
-  font-size: 0.92rem;
-  margin: 0;
-}
-
-.badge {
   display: inline-block;
-  background: #2563eb;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease;
+}
+.feature-card:hover .feature-icon {
+  transform: scale(1.2) rotate(-4deg);
 }
 
-.article-item {
-  position: relative;
+/* --- Hero image gentle float --- */
+.hero-image img {
+  animation: heroFloat 5s ease-in-out infinite;
+}
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-.article-item .tag {
-  margin-bottom: 0.5rem;
-  display: inline-block;
-}
-
+/* --- Read more link arrow motion --- */
 .read-more {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #2563eb;
-  font-weight: 700;
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
-
 .read-more:hover {
-  text-decoration: underline;
+  gap: 0.55rem;
+  color: #1d4ed8;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 2rem;
-  align-items: start;
+/* --- Form inputs --- */
+input, textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-.contact-info-list {
-  display: grid;
-  gap: 1rem;
+/* --- Scroll reveal (elements start hidden, JS adds .in-view) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.contact-info-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+/* --- Badge pulse --- */
+.badge {
+  animation: badgePulse 2.4s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45); }
+  50% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0); }
 }
 
-.contact-info-card h3 {
-  margin: 0.25rem 0;
+/* --- Page load fade-in for hero/banner sections --- */
+.hero, .page-banner {
+  animation: fadeInDown 0.7s ease both;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.contact-info-card p {
-  margin: 0;
-  color: #4b5563;
-  font-size: 0.9rem;
+/* --- Footer link hover (if any added later) --- */
+.site-footer a:hover {
+  color: #60a5fa;
 }
 
-.contact-form h2 {
-  margin-top: 0;
-}
-
-@media (max-width: 900px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
+/* --- Respect reduced motion preference --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
