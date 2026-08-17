@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About DailyPulse news website." />
   <title>DailyPulse | About</title>
+  <meta name="description" content="Learn about DailyPulse — a clean, modern news and blog website delivering fresh stories every day." />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/launchericon-192x192.png">
+  <link rel="apple-touch-icon" href="icons/launchericon-192x192.png">
+  <meta name="theme-color" content="#2563eb">
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+  <script defer src="main/main.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -22,45 +26,101 @@
     </div>
   </header>
 
-  <main class="container section">
-    <h1>About DailyPulse</h1>
+  <main>
+    <!-- Page hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">About Us</p>
+          <h1>The story behind DailyPulse.</h1>
+          <p>
+            DailyPulse is a modern blog and news website built to bring clean, easy-to-read
+            stories to readers on any device — fast, simple, and free of clutter.
+          </p>
+          <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+        <div class="hero-image">
+          <img src="hero.jpg?v=2" alt="DailyPulse team at work" loading="lazy" />
+        </div>
+      </div>
+    </section>
 
-    <p>
-      DailyPulse is a modern blog and news website created to bring clean, easy‑to‑read articles to readers on any device.
-      It focuses on short, clear stories that help you stay updated without feeling overwhelmed.
-    </p>
+    <!-- Mission -->
+    <section class="container section">
+      <div class="section-header">
+        <h2>Our Mission</h2>
+      </div>
+      <p>
+        We believe staying informed shouldn't feel overwhelming. DailyPulse focuses on
+        short, clear stories that help you catch up quickly — whether you have five minutes
+        or an hour to spare. No noise, no clickbait, just the pulse of what's happening today.
+      </p>
+    </section>
 
-    <p>
-      This project was built as a complete frontend website using semantic HTML, responsive CSS, and JavaScript.
-      It is designed to be fast, mobile‑friendly, and accessible so that users on phones, tablets, and laptops can enjoy the same smooth experience.
-    </p>
+    <!-- Stats strip -->
+    <section class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">News Categories</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Mobile Friendly</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">Daily</span>
+          <span class="stat-label">Fresh Updates</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">Free</span>
+          <span class="stat-label">Always & Forever</span>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      The homepage highlights the latest news, while the Articles page groups hand‑picked stories and guides.
-      A dynamic “Latest News” section integrates with a real news API to show fresh headlines directly inside the website.
-    </p>
+    <!-- Goals -->
+    <section class="container section">
+      <div class="section-header">
+        <h2>What We Focus On</h2>
+      </div>
+      <div class="card-grid feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Built for Every Screen</h3>
+          <p>A fully responsive layout that looks great on phones, tablets, and laptops alike.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast & Lightweight</h3>
+          <p>No bloated frameworks — just clean code that loads quickly wherever you are.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📰</div>
+          <h3>Live, Real News</h3>
+          <p>Our homepage pulls real-time headlines so you always see what's happening now.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">♿</div>
+          <h3>Accessible by Design</h3>
+          <p>Clear structure, readable typography, and labeled forms for everyone.</p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      The site also includes a contact form so visitors can share feedback, suggestions, or collaboration ideas.
-      All forms are validated in the browser to reduce errors and improve the overall experience.
-    </p>
-
-    <h2>Goals of This Project</h2>
-    <ul>
-      <li>Practice planning and building a complete multi‑page website.</li>
-      <li>Use responsive design so the layout works on mobile and desktop.</li>
-      <li>Apply accessibility best practices with clear structure and labels.</li>
-      <li>Integrate a third‑party API to display real news data.</li>
-      <li>Prepare a project that can be deployed and shown in a portfolio.</li>
-    </ul>
-
-    <h2>Technologies Used</h2>
-    <ul>
-      <li>HTML5 for structure and semantic content.</li>
-      <li>CSS3 for styling, layout, and responsive design.</li>
-      <li>JavaScript for interactivity, form validation, and API calls.</li>
-      <li>NewsAPI for fetching live news articles.</li>
-    </ul>
+    <!-- Tech stack -->
+    <section class="container section">
+      <div class="section-header">
+        <h2>Built With</h2>
+      </div>
+      <div class="article-tags">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Live News API</span>
+        <span class="tag">Responsive Design</span>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
